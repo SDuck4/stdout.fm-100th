@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스탠다드아웃 100회 기념</title>
+    <link rel="stylesheet" href="https://unpkg.com/@pqina/flip/dist/flip.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="https://unpkg.com/@pqina/flip/dist/flip.min.js"></script>
+    <script src="https://unpkg.com/vue@2.6.12/dist/vue.min.js"></script>
+    <script src="https://unpkg.com/vuewordcloud@18.7.12/index.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <div class="page">
+            <section id="main">
+                <img class="logo" src="./img/logo.png" alt="스탠다드아웃 100번째 에피소드를 축하합니다!!">
+                <h2>스탠다드아웃 100회 기념, 지난 에피소드 돌아보기</h2>
+                <ul>
+                    <li>데이터 기준일 - 2020.10.16</li>
+                    <li>에피소드 발행일 - 팟빵</li>
+                    <li>멤버, 토픽 - 홈페이지 쇼노트</li>
+                </ul>
+            </section>
+        </div>
+        <div class="hr"></div>
+        <h2>에피소드</h2>
+        <section>
+            <h3>총 100회 에피소드</h3>
+            <ul>
+                <li>스탠다드아웃 - 93회 (1~96)</li>
+                <li>스탠다드에러 - 7회 (8, 14, 18, 27, 46, 47, 52)</li>
+                <li>잃어버린 에피소드 - 4회 (46, 47, 52, 85)</li>
+            </ul>
+        </section>
+        <section>
+            <h3>첫 번째 에피소드 공개일(2018-10-24) 이후로 지난 시간</h3>
+            <div class="tick" data-did-init="handleEpisodeFirstTickInit">
+                <div data-repeat="true" data-layout="horizontal left"
+                    data-transform="preset(y, M, d, h, m, s) -> delay">
+                    <div class="tick-group">
+                        <div data-key="value" data-repeat="true" data-transform="pad(00) -> split -> delay">
+                            <span data-view="flip"></span>
+                        </div>
+                        <span data-key="label" data-view="text" class="tick-label"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h3>평균 발행 주기</h3>
+            <div class="tick" data-did-init="handleEpisodePeriodTickInit">
+                <div data-repeat="true" data-layout="horizontal left" data-transform="preset(d, h, m, s) -> delay">
+                    <div class="tick-group">
+                        <div data-key="value" data-repeat="true" data-transform="pad(00) -> split -> delay">
+                            <span data-view="flip"></span>
+                        </div>
+                        <span data-key="label" data-view="text" class="tick-label"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h3>에피소드 전체 시간</h3>
+            <div class="tick" data-did-init="handleEpisodeDurationSumTickInit">
+                <div data-repeat="true" data-layout="horizontal left" data-transform="preset(d, h, m, s) -> delay">
+                    <div class="tick-group">
+                        <div data-key="value" data-repeat="true" data-transform="pad(00) -> split -> delay">
+                            <span data-view="flip"></span>
+                        </div>
+                        <span data-key="label" data-view="text" class="tick-label"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h3>에피소드 평균 시간</h3>
+            <div class="tick" data-did-init="handleEpisodeDurationAvgTickInit">
+                <div data-repeat="true" data-layout="horizontal left" data-transform="preset(h, m, s) -> delay">
+                    <div class="tick-group">
+                        <div data-key="value" data-repeat="true" data-transform="pad(00) -> split -> delay">
+                            <span data-view="flip"></span>
+                        </div>
+                        <span data-key="label" data-view="text" class="tick-label"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h3>가장 긴 에피소드</h3>
+            <p><a href="https://stdout.fm/26/" target="_blank" rel="noopener noreferrer">stdout_026.log: 루비 카이기 2019,
+                    쿡패드, 일본 개발 커뮤니티 w/ shia</a></p>
+            <div class="tick" data-did-init="handleEpisodeLongTickInit">
+                <div data-repeat="true" data-layout="horizontal left" data-transform="preset(h, m, s) -> delay">
+                    <div class="tick-group">
+                        <div data-key="value" data-repeat="true" data-transform="pad(00) -> split -> delay">
+                            <span data-view="flip"></span>
+                        </div>
+                        <span data-key="label" data-view="text" class="tick-label"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h3>가장 짧은 에피소드</h3>
+            <p><a href="https://stdout.fm/14_err/" target="_blank" rel="noopener noreferrer">stderr_014.log: 마법 같이 이해되는
+                    마법사의 CIDR 해설</a></p>
+            <div class="tick" data-did-init="handleEpisodeShortTickInit">
+                <div data-repeat="true" data-layout="horizontal left" data-transform="preset(h, m, s) -> delay">
+                    <div class="tick-group">
+                        <div data-key="value" data-repeat="true" data-transform="pad(00) -> split -> delay">
+                            <span data-view="flip"></span>
+                        </div>
+                        <span data-key="label" data-view="text" class="tick-label"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="hr"></div>
+        <h2>멤버</h2>
+        <h3>전체 출연 멤버 - 27명</h3>
+        <section>
+            <h3>44bits - 5명</h3>
+            <div class="member-container">
+                <div v-for="member in member_44bits_count" class="member">
+                    <img class="profile" :src="'https://unavatar.now.sh/twitter/'+member.id" :alt="member.id">
+                    <div class="name">
+                        <a :href="member.link" target="_blank" rel="noopener noreferrer">
+                            {{member.name}}
+                        </a>
+                    </div>
+                    <div class="count">총 {{member.count}}회 출연</div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h3>게스트 - 22명</h3>
+            <div class="member-container">
+                <div v-for="member in member_guest_count" class="member">
+                    <img class="profile" :src="'https://unavatar.now.sh/twitter/'+member.id" :alt="member.id">
+                    <div class="name">
+                        <a v-if="member.is_twitter" :href="member.link" target="_blank" rel="noopener noreferrer">
+                            {{member.name}}
+                        </a>
+                        <span v-else>{{member.name}}</span>
+                    </div>
+                    <div class="count">총 {{member.count}}회 출연</div>
+                </div>
+            </div>
+        </section>
+        <div class="hr"></div>
+        <h2>토픽</h2>
+        <h3>전체 토픽 - {{sum_category_count}}개</h3>
+        <section v-for="category in topic_category_count">
+            <h3>{{category.name}} - {{category.count}}개</h3>
+            <p>{{category.desc}}</p>
+            <vue-word-cloud style="width: 100%; height: 400px;" :words="topic_category[category.category]"
+                :color="wordcloudColor" font-family="Noto Sans KR" />
+        </section>
+        <section>
+            <h3>주요 인용 소스</h3>
+            <ol>
+                <li v-for="hostname in link_hostname_count">
+                    <img class="favicon" :src="hostname.favicon" alt="favicon">
+                    {{hostname.hostname}} - {{hostname.count}}회
+                </li>
+            </ol>
+        </section>
+        <div class="hr"></div>
+        <section id="footer">
+            Written by <a href="https://github.com/SDuck4" target="_blank" rel="noopener noreferrer">@SDuck4</a>
+        </section>
+    </div>
+    <script src="./js/data.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
