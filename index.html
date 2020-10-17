@@ -120,9 +120,9 @@
         </section>
         <div class="hr"></div>
         <h2>멤버</h2>
-        <h3>전체 출연 멤버 - 27명</h3>
+        <h3>전체 출연 멤버 - {{member_44bits_count.length + member_guest_count.length}}명</h3>
         <section>
-            <h3>44bits - 5명</h3>
+            <h3>44bits - {{member_44bits_count.length}}명</h3>
             <div class="member-container">
                 <div v-for="member in member_44bits_count" class="member">
                     <img class="profile" :src="'https://unavatar.now.sh/twitter/'+member.id" :alt="member.id">
@@ -136,7 +136,7 @@
             </div>
         </section>
         <section>
-            <h3>게스트 - 22명</h3>
+            <h3>게스트 - {{member_guest_count.length}}명</h3>
             <div class="member-container">
                 <div v-for="member in member_guest_count" class="member">
                     <img class="profile" :src="'https://unavatar.now.sh/twitter/'+member.id" :alt="member.id">
